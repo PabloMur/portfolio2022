@@ -1,0 +1,8 @@
+{
+  "name": "portfolio2022",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:PabloMur/portfolio2022.git",
+  "author": "Pablo <pablomurillo.sp@gmail.com>",
+  "license": "MIT"
+}
