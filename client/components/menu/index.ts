@@ -11,10 +11,10 @@ class CustomMenu extends HTMLElement {
                 </div>
                 <nav class="menu-nav">
                     <ul class="nav-list">
-                        <li>Proyects</li>
-                        <li>Stack</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><a href="/stack">Stack</a></li>
+                        <li><a href="/proyects">Proyects</a></li>
+                        <li><a href="/about">About Me</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,9 +30,23 @@ class CustomMenu extends HTMLElement {
             align-items:center;
             color:white;
             padding:10px;
+            position:fixed;
+            z-index:3;
         }
         .nav-list{
-            display:flex;    
+            display:flex;
+            width:400px;
+            justify-content: space-between;    
+            align-items: center;
+            padding-right: 30px;
+        }
+
+        li{
+            list-style:none;
+        }
+        a{
+            color: white;
+            text-decoration: none;
         }
     `;
     this.appendChild(style);

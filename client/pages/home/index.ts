@@ -9,7 +9,8 @@ class HomePage extends HTMLElement {
             <custom-menu></custom-menu>
             <div class="banner">
                 <div class="cicleOne"></div>
-                <h1>Bienvenidos a mi site!</h1>
+                <h1 class="banner-main">Hi, I am Pablo!</h1>
+                <h3>full-stack developer</h3>
             </div>
             <custom-footer></custom-footer>
         </div>
@@ -28,6 +29,15 @@ class HomePage extends HTMLElement {
             color:#1ed760;
             overflow: hidden;
             position:relative;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-main{
+          height: 25vh;
+          font-size: 80px;
+          font-weight: 700;
         }
         .cicleOne{
             position:absolute;

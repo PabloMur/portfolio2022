@@ -458,11 +458,15 @@ function hmrAcceptRun(bundle, id) {
 var _router = require("./router");
 //pages
 var _index = require("./pages/home/index");
+var _index1 = require("./pages/proyects/index");
+var _index2 = require("./pages/stack/index");
+var _index3 = require("./pages/contact/index");
+var _index4 = require("./pages/about/index");
 //components
-var _index1 = require("./components/menu/index");
-var _index2 = require("./components/footer/index");
+var _index5 = require("./components/menu/index");
+var _index6 = require("./components/footer/index");
 
-},{"./router":"4zXxa","./pages/home/index":"e9Za3","./components/menu/index":"exmwu","./components/footer/index":"7TNkX"}],"4zXxa":[function(require,module,exports) {
+},{"./router":"4zXxa","./pages/home/index":"e9Za3","./components/menu/index":"exmwu","./components/footer/index":"7TNkX","./pages/proyects/index":"7ksAj","./pages/stack/index":"hOgUM","./pages/contact/index":"LRDL7","./pages/about/index":"2ujWD"}],"4zXxa":[function(require,module,exports) {
 var _router = require("@vaadin/router");
 const router = new _router.Router(document.querySelector(".root"));
 router.setRoutes([
@@ -472,19 +476,19 @@ router.setRoutes([
     },
     {
         path: "/about",
-        component: "access-page"
+        component: "about-page"
     },
     {
         path: "/contact",
-        component: "new-room-page"
+        component: "contact-page"
     },
     {
         path: "/stack",
-        component: "game-room-page"
+        component: "stack-page"
     },
     {
         path: "/proyects",
-        component: "pre-game-room-page"
+        component: "proyects-page"
     }, 
 ]);
 
@@ -2882,8 +2886,8 @@ class HomePage extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n        <div class="home-page">\n            <custom-menu></custom-menu>\n            <div class="banner">\n                <div class="cicleOne"></div>\n                <h1>Bienvenidos a mi site!</h1>\n            </div>\n            <custom-footer></custom-footer>\n        </div>\n      `;
-        style.innerHTML = `\n        .home-page{\n            height:140vh;\n            width:100%;\n            padding-bottom:0;\n        }\n        .banner{\n            background:rgb(41,65,171);\n            width: 100%;\n            height:88vh;\n            padding: 20px;\n            color:#1ed760;\n            overflow: hidden;\n            position:relative;\n        }\n        .cicleOne{\n            position:absolute;\n            height:300px;\n            width:300px;\n            background-color:#1ed760;\n            border-radius:200px;\n            top:-150px;\n            right:-150px;\n    \n    `;
+        this.innerHTML = `\n        <div class="home-page">\n            <custom-menu></custom-menu>\n            <div class="banner">\n                <div class="cicleOne"></div>\n                <h1 class="banner-main">Hi, I am Pablo!</h1>\n                <h3>full-stack developer</h3>\n            </div>\n            <custom-footer></custom-footer>\n        </div>\n      `;
+        style.innerHTML = `\n        .home-page{\n            height:140vh;\n            width:100%;\n            padding-bottom:0;\n        }\n        .banner{\n            background:rgb(41,65,171);\n            width: 100%;\n            height:88vh;\n            padding: 20px;\n            color:#1ed760;\n            overflow: hidden;\n            position:relative;\n            display:flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n        }\n        .banner-main{\n          height: 25vh;\n          font-size: 80px;\n          font-weight: 700;\n        }\n        .cicleOne{\n            position:absolute;\n            height:300px;\n            width:300px;\n            background-color:#1ed760;\n            border-radius:200px;\n            top:-150px;\n            right:-150px;\n    \n    `;
         this.appendChild(style);
     }
 }
@@ -2896,8 +2900,8 @@ class CustomMenu extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n            <div class="menu-container">\n                <div class="menu-logo">\n                    <h3 class="logo-name">Pablo Murillo</h3>\n                </div>\n                <nav class="menu-nav">\n                    <ul class="nav-list">\n                        <li>Proyects</li>\n                        <li>Stack</li>\n                        <li>About</li>\n                        <li>Contact</li>\n                    </ul>\n                </nav>\n            </div>\n        `;
-        style.innerHTML = `\n        .menu-container{\n            height: 12vh;\n            width:100%;\n            background:black;\n            margin-top:0;\n            display:flex;\n            justify-content: space-between;\n            align-items:center;\n            color:white;\n            padding:10px;\n        }\n        .nav-list{\n            display:flex;    \n        }\n    `;
+        this.innerHTML = `\n            <div class="menu-container">\n                <div class="menu-logo">\n                    <h3 class="logo-name">Pablo Murillo</h3>\n                </div>\n                <nav class="menu-nav">\n                    <ul class="nav-list">\n                        <li><a href="/stack">Stack</a></li>\n                        <li><a href="/proyects">Proyects</a></li>\n                        <li><a href="/about">About Me</a></li>\n                        <li><a href="/contact">Contact</a></li>\n                    </ul>\n                </nav>\n            </div>\n        `;
+        style.innerHTML = `\n        .menu-container{\n            height: 12vh;\n            width:100%;\n            background:black;\n            margin-top:0;\n            display:flex;\n            justify-content: space-between;\n            align-items:center;\n            color:white;\n            padding:10px;\n            position:fixed;\n            z-index:3;\n        }\n        .nav-list{\n            display:flex;\n            width:400px;\n            justify-content: space-between;    \n            align-items: center;\n            padding-right: 30px;\n        }\n\n        li{\n            list-style:none;\n        }\n        a{\n            color: white;\n            text-decoration: none;\n        }\n    `;
         this.appendChild(style);
     }
 }
@@ -2916,6 +2920,62 @@ class Footer extends HTMLElement {
     }
 }
 customElements.define("custom-footer", Footer);
+
+},{}],"7ksAj":[function(require,module,exports) {
+class Proyects extends HTMLElement {
+    connectedCallback() {
+        this.render();
+    }
+    render() {
+        const style = document.createElement("style");
+        this.innerHTML = `\n          <div class="home-page">\n              <custom-menu></custom-menu>\n              <div class="banner">\n                  <div class="cicleOne"></div>\n                  <h1 class="banner-main">Proyects</h1>\n                  <h3>full-stack developer</h3>\n              </div>\n              <custom-footer></custom-footer>\n          </div>\n        `;
+        style.innerHTML = `\n          .home-page{\n              height:140vh;\n              width:100%;\n              padding-bottom:0;\n          }\n          .banner{\n              background:rgb(41,65,171);\n              width: 100%;\n              min-height:100vh;\n              padding: 20px;\n              color:#1ed760;\n              overflow: hidden;\n              position:relative;\n              display:flex;\n              flex-direction: column;\n              justify-content: center;\n              align-items: center;\n          }\n          .banner-main{\n            height: 25vh;\n            font-size: 80px;\n            font-weight: 700;\n          }\n          .cicleOne{\n              position:absolute;\n              height:300px;\n              width:300px;\n              background-color:#1ed760;\n              border-radius:200px;\n              top:-150px;\n              right:-150px;\n      \n      `;
+        this.appendChild(style);
+    }
+}
+customElements.define("proyects-page", Proyects);
+
+},{}],"hOgUM":[function(require,module,exports) {
+class Stack extends HTMLElement {
+    connectedCallback() {
+        this.render();
+    }
+    render() {
+        const style = document.createElement("style");
+        this.innerHTML = `\n            <div class="home-page">\n                <custom-menu></custom-menu>\n                <div class="banner">\n                    <div class="cicleOne"></div>\n                    <h1 class="banner-main">Stack</h1>\n                    <h3>full-stack developer</h3>\n                </div>\n                <custom-footer></custom-footer>\n            </div>\n          `;
+        style.innerHTML = `\n            .home-page{\n                height:140vh;\n                width:100%;\n                padding-bottom:0;\n            }\n            .banner{\n                background:rgb(41,65,171);\n                width: 100%;\n                min-height:100vh;\n                padding: 20px;\n                color:#1ed760;\n                overflow: hidden;\n                position:relative;\n                display:flex;\n                flex-direction: column;\n                justify-content: center;\n                align-items: center;\n            }\n            .banner-main{\n              height: 25vh;\n              font-size: 80px;\n              font-weight: 700;\n            }\n            .cicleOne{\n                position:absolute;\n                height:300px;\n                width:300px;\n                background-color:#1ed760;\n                border-radius:200px;\n                top:-150px;\n                right:-150px;\n        \n        `;
+        this.appendChild(style);
+    }
+}
+customElements.define("stack-page", Stack);
+
+},{}],"LRDL7":[function(require,module,exports) {
+class Contact extends HTMLElement {
+    connectedCallback() {
+        this.render();
+    }
+    render() {
+        const style = document.createElement("style");
+        this.innerHTML = `\n              <div class="home-page">\n                  <custom-menu></custom-menu>\n                  <div class="banner">\n                      <div class="cicleOne"></div>\n                      <h1 class="banner-main">Contact</h1>\n                      <h3>full-stack developer</h3>\n                  </div>\n                  <custom-footer></custom-footer>\n              </div>\n            `;
+        style.innerHTML = `\n              .home-page{\n                  height:140vh;\n                  width:100%;\n                  padding-bottom:0;\n              }\n              .banner{\n                  background:rgb(41,65,171);\n                  width: 100%;\n                  min-height:100vh;\n                  padding: 20px;\n                  color:#1ed760;\n                  overflow: hidden;\n                  position:relative;\n                  display:flex;\n                  flex-direction: column;\n                  justify-content: center;\n                  align-items: center;\n              }\n              .banner-main{\n                height: 25vh;\n                font-size: 80px;\n                font-weight: 700;\n              }\n              .cicleOne{\n                  position:absolute;\n                  height:300px;\n                  width:300px;\n                  background-color:#1ed760;\n                  border-radius:200px;\n                  top:-150px;\n                  right:-150px;\n          \n          `;
+        this.appendChild(style);
+    }
+}
+customElements.define("contact-page", Contact);
+
+},{}],"2ujWD":[function(require,module,exports) {
+class About extends HTMLElement {
+    connectedCallback() {
+        this.render();
+    }
+    render() {
+        const style = document.createElement("style");
+        this.innerHTML = `\n              <div class="home-page">\n                  <custom-menu></custom-menu>\n                  <div class="banner">\n                      <div class="cicleOne"></div>\n                      <h1 class="banner-main">About Me</h1>\n                      <h3>full-stack developer</h3>\n                  </div>\n                  <custom-footer></custom-footer>\n              </div>\n            `;
+        style.innerHTML = `\n              .home-page{\n                  height:140vh;\n                  width:100%;\n                  padding-bottom:0;\n              }\n              .banner{\n                  background:rgb(41,65,171);\n                  width: 100%;\n                  min-height:100vh;\n                  padding: 20px;\n                  color:#1ed760;\n                  overflow: hidden;\n                  position:relative;\n                  display:flex;\n                  flex-direction: column;\n                  justify-content: center;\n                  align-items: center;\n              }\n              .banner-main{\n                height: 25vh;\n                font-size: 80px;\n                font-weight: 700;\n              }\n              .cicleOne{\n                  position:absolute;\n                  height:300px;\n                  width:300px;\n                  background-color:#1ed760;\n                  border-radius:200px;\n                  top:-150px;\n                  right:-150px;\n          \n          `;
+        this.appendChild(style);
+    }
+}
+customElements.define("about-page", About);
 
 },{}]},["gcK6j","4L6tv"], "4L6tv", "parcelRequire79e7")
 
