@@ -7,7 +7,7 @@ class CustomMenu extends HTMLElement {
     this.innerHTML = `
             <div class="menu-container">
                 <div class="menu-logo">
-                    <h3 class="logo-name">Pablo Murillo</h3>
+                    <h3 class="logo-name"><a href="/">Pablo Murillo</a></h3>
                 </div>
                 <nav class="menu-nav">
                     <ul class="nav-list">
@@ -47,6 +47,9 @@ class CustomMenu extends HTMLElement {
         a{
             color: white;
             text-decoration: none;
+        }
+        a:hover{
+            color:rgb(85,215,96);
         }
     `;
     this.appendChild(style);

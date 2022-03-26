@@ -465,8 +465,9 @@ var _index4 = require("./pages/about/index");
 //components
 var _index5 = require("./components/menu/index");
 var _index6 = require("./components/footer/index");
+var _index7 = require("./components/custom-title/index");
 
-},{"./router":"4zXxa","./pages/home/index":"e9Za3","./components/menu/index":"exmwu","./components/footer/index":"7TNkX","./pages/proyects/index":"7ksAj","./pages/stack/index":"hOgUM","./pages/contact/index":"LRDL7","./pages/about/index":"2ujWD"}],"4zXxa":[function(require,module,exports) {
+},{"./router":"4zXxa","./pages/home/index":"e9Za3","./components/menu/index":"exmwu","./components/footer/index":"7TNkX","./pages/proyects/index":"7ksAj","./pages/stack/index":"hOgUM","./pages/contact/index":"LRDL7","./pages/about/index":"2ujWD","./components/custom-title/index":"bckQL"}],"4zXxa":[function(require,module,exports) {
 var _router = require("@vaadin/router");
 const router = new _router.Router(document.querySelector(".root"));
 router.setRoutes([
@@ -2886,8 +2887,8 @@ class HomePage extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n        <div class="home-page">\n            <custom-menu></custom-menu>\n            <div class="banner">\n                <div class="cicleOne"></div>\n                <h1 class="banner-main">Hi, I am Pablo!</h1>\n                <h3>full-stack developer</h3>\n            </div>\n            <custom-footer></custom-footer>\n        </div>\n      `;
-        style.innerHTML = `\n        .home-page{\n            height:140vh;\n            width:100%;\n            padding-bottom:0;\n        }\n        .banner{\n            background:rgb(41,65,171);\n            width: 100%;\n            height:88vh;\n            padding: 20px;\n            color:#1ed760;\n            overflow: hidden;\n            position:relative;\n            display:flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n        }\n        .banner-main{\n          height: 25vh;\n          font-size: 80px;\n          font-weight: 700;\n        }\n        .cicleOne{\n            position:absolute;\n            height:300px;\n            width:300px;\n            background-color:#1ed760;\n            border-radius:200px;\n            top:-150px;\n            right:-150px;\n    \n    `;
+        this.innerHTML = `\n        <div class="home-page">\n            <custom-menu></custom-menu>\n            <div class="banner">\n                <h1 class="banner-main">Hi, I am Pablo!</h1>\n                <h3>full-stack developer</h3>\n            </div>\n            <custom-footer></custom-footer>\n        </div>\n      `;
+        style.innerHTML = `\n        .home-page{\n            height:140vh;\n            width:100%;\n            padding-bottom:0;\n        }\n        .banner{\n            background:rgb(41,65,171);\n            width: 100%;\n            height:100vh;\n            padding: 20px;\n            color:#1ed760;\n            overflow: hidden;\n            position:relative;\n            display:flex;\n            flex-direction: column;\n            justify-content: center;\n            align-items: center;\n        }\n        .banner-main{\n          height: 25vh;\n          font-size: 80px;\n          font-weight: 700;\n        }\n        .cicleOne{\n            position:absolute;\n            height:300px;\n            width:300px;\n            background-color:#1ed760;\n            border-radius:200px;\n            top:-150px;\n            right:-150px;\n    \n    `;
         this.appendChild(style);
     }
 }
@@ -2900,8 +2901,8 @@ class CustomMenu extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n            <div class="menu-container">\n                <div class="menu-logo">\n                    <h3 class="logo-name">Pablo Murillo</h3>\n                </div>\n                <nav class="menu-nav">\n                    <ul class="nav-list">\n                        <li><a href="/stack">Stack</a></li>\n                        <li><a href="/proyects">Proyects</a></li>\n                        <li><a href="/about">About Me</a></li>\n                        <li><a href="/contact">Contact</a></li>\n                    </ul>\n                </nav>\n            </div>\n        `;
-        style.innerHTML = `\n        .menu-container{\n            height: 12vh;\n            width:100%;\n            background:black;\n            margin-top:0;\n            display:flex;\n            justify-content: space-between;\n            align-items:center;\n            color:white;\n            padding:10px;\n            position:fixed;\n            z-index:3;\n        }\n        .nav-list{\n            display:flex;\n            width:400px;\n            justify-content: space-between;    \n            align-items: center;\n            padding-right: 30px;\n        }\n\n        li{\n            list-style:none;\n        }\n        a{\n            color: white;\n            text-decoration: none;\n        }\n    `;
+        this.innerHTML = `\n            <div class="menu-container">\n                <div class="menu-logo">\n                    <h3 class="logo-name"><a href="/">Pablo Murillo</a></h3>\n                </div>\n                <nav class="menu-nav">\n                    <ul class="nav-list">\n                        <li><a href="/stack">Stack</a></li>\n                        <li><a href="/proyects">Proyects</a></li>\n                        <li><a href="/about">About Me</a></li>\n                        <li><a href="/contact">Contact</a></li>\n                    </ul>\n                </nav>\n            </div>\n        `;
+        style.innerHTML = `\n        .menu-container{\n            height: 12vh;\n            width:100%;\n            background:black;\n            margin-top:0;\n            display:flex;\n            justify-content: space-between;\n            align-items:center;\n            color:white;\n            padding:10px;\n            position:fixed;\n            z-index:3;\n        }\n        .nav-list{\n            display:flex;\n            width:400px;\n            justify-content: space-between;    \n            align-items: center;\n            padding-right: 30px;\n        }\n\n        li{\n            list-style:none;\n        }\n        a{\n            color: white;\n            text-decoration: none;\n        }\n        a:hover{\n            color:rgb(85,215,96);\n        }\n    `;
         this.appendChild(style);
     }
 }
@@ -2914,8 +2915,8 @@ class Footer extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n        <div class="footer-container">\n        </div> \n        `;
-        style.innerHTML = `\n            .footer-container{\n                background:black;\n                width: 100%;\n                height: 40vh;\n            }\n        \n        `;
+        this.innerHTML = `\n        <div class="footer-container">\n          <span> derechos 2022/2023</span>\n        </div> \n        `;
+        style.innerHTML = `\n            .footer-container{\n                background:black;\n                width: 100%;\n                height: 40vh;\n                color:white;\n                display:flex;\n                flex-direction: column;\n                justify-content: center;\n                align-items: center;\n\n            }\n        \n        `;
         this.appendChild(style);
     }
 }
@@ -2928,7 +2929,7 @@ class Proyects extends HTMLElement {
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n          <div class="home-page">\n              <custom-menu></custom-menu>\n              <div class="banner">\n                  <div class="cicleOne"></div>\n                  <h1 class="banner-main">Proyects</h1>\n                  <h3>full-stack developer</h3>\n              </div>\n              <custom-footer></custom-footer>\n          </div>\n        `;
+        this.innerHTML = `\n          <div class="home-page">\n              <custom-menu></custom-menu>\n              <div class="banner">\n                  <div class="cicleOne"></div>\n                  <h1 class="banner-main">Proyects</h1>\n                  <custom-title>Proyects</custom-title>\n                  <h3>full-stack developer</h3>\n              </div>\n              <custom-footer></custom-footer>\n          </div>\n        `;
         style.innerHTML = `\n          .home-page{\n              height:140vh;\n              width:100%;\n              padding-bottom:0;\n          }\n          .banner{\n              background:rgb(41,65,171);\n              width: 100%;\n              min-height:100vh;\n              padding: 20px;\n              color:#1ed760;\n              overflow: hidden;\n              position:relative;\n              display:flex;\n              flex-direction: column;\n              justify-content: center;\n              align-items: center;\n          }\n          .banner-main{\n            height: 25vh;\n            font-size: 80px;\n            font-weight: 700;\n          }\n          .cicleOne{\n              position:absolute;\n              height:300px;\n              width:300px;\n              background-color:#1ed760;\n              border-radius:200px;\n              top:-150px;\n              right:-150px;\n      \n      `;
         this.appendChild(style);
     }
@@ -2936,20 +2937,79 @@ class Proyects extends HTMLElement {
 customElements.define("proyects-page", Proyects);
 
 },{}],"hOgUM":[function(require,module,exports) {
+const javascript = require("url:./img/js.png");
+const typescript = require("url:./img/typescript.png");
+const html = require("url:./img/html-5.png");
+const css = require("url:./img/css-3.png");
+const git = require("url:./img/git.png");
+const node = require("url:./img/nodo-js.png");
 class Stack extends HTMLElement {
     connectedCallback() {
         this.render();
     }
     render() {
         const style = document.createElement("style");
-        this.innerHTML = `\n            <div class="home-page">\n                <custom-menu></custom-menu>\n                <div class="banner">\n                    <div class="cicleOne"></div>\n                    <h1 class="banner-main">Stack</h1>\n                    <h3>full-stack developer</h3>\n                </div>\n                <custom-footer></custom-footer>\n            </div>\n          `;
-        style.innerHTML = `\n            .home-page{\n                height:140vh;\n                width:100%;\n                padding-bottom:0;\n            }\n            .banner{\n                background:rgb(41,65,171);\n                width: 100%;\n                min-height:100vh;\n                padding: 20px;\n                color:#1ed760;\n                overflow: hidden;\n                position:relative;\n                display:flex;\n                flex-direction: column;\n                justify-content: center;\n                align-items: center;\n            }\n            .banner-main{\n              height: 25vh;\n              font-size: 80px;\n              font-weight: 700;\n            }\n            .cicleOne{\n                position:absolute;\n                height:300px;\n                width:300px;\n                background-color:#1ed760;\n                border-radius:200px;\n                top:-150px;\n                right:-150px;\n        \n        `;
+        this.innerHTML = `\n            <div class="home-page">\n                <custom-menu></custom-menu>\n                <div class="banner">\n                    <div class="cicleOne"></div>\n                    <h1 class="banner-main">Stack</h1>\n                    <ul class="stack-list">\n                      <li><img src="${javascript}"/></li>\n                      <li><img src="${typescript}"/></li>\n                      <li><img src="${html}"/></li>\n                      <li><img src="${css}"/></li>\n                      <li><img src="${git}"/></li>\n                      <li><img src="${node}"/></li>\n                    </ul>\n                </div>\n                <custom-footer></custom-footer>\n            </div>\n          `;
+        style.innerHTML = `\n            .home-page{\n                height:140vh;\n                width:100%;\n                padding-bottom:0;\n            }\n            .banner{\n                background:rgb(41,65,171);\n                width: 100%;\n                min-height:100vh;\n                padding: 20px;\n                color:#1ed760;\n                overflow: hidden;\n                position:relative;\n                display:flex;\n                flex-direction: column;\n                justify-content: center;\n                align-items: center;\n            }\n            .banner-main{\n              font-size: 80px;\n              font-weight: 700;\n            }\n            .cicleOne{\n                position:absolute;\n                height:300px;\n                width:300px;\n                background-color:#1ed760;\n                border-radius:200px;\n                top:-150px;\n                right:-150px;\n            }\n            .stack-list{\n              display:flex;\n              width: 40%;\n              justify-content: space-between;\n              padding:0;\n              margin: 0 auto;\n            }\n            img{\n              height:75px;\n              width:75px;\n              box-shadow: 0 0 15px black;\n            }\n        `;
         this.appendChild(style);
     }
 }
 customElements.define("stack-page", Stack);
 
-},{}],"LRDL7":[function(require,module,exports) {
+},{"url:./img/typescript.png":"36Qs6","url:./img/js.png":"jlcGl","url:./img/html-5.png":"fBQWg","url:./img/css-3.png":"T0sbw","url:./img/git.png":"9uHHY","url:./img/nodo-js.png":"lxtkS"}],"36Qs6":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "typescript.610728b2.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"jlcGl":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "js.374508e9.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"fBQWg":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "html-5.3ee89890.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"T0sbw":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "css-3.42dd7466.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"9uHHY":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "git.fc5155d4.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"lxtkS":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('8st4b') + "nodo-js.3348560a.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"LRDL7":[function(require,module,exports) {
 class Contact extends HTMLElement {
     connectedCallback() {
         this.render();
@@ -2976,6 +3036,20 @@ class About extends HTMLElement {
     }
 }
 customElements.define("about-page", About);
+
+},{}],"bckQL":[function(require,module,exports) {
+class CustomTitle extends HTMLElement {
+    connectedCallback() {
+        this.render();
+    }
+    render() {
+        const style = document.createElement("style");
+        this.innerHTML = `\n          <div class="title-container">\n            <h1>${this.textContent}</h1>\n          </div> \n          `;
+        style.innerHTML = `\n              .title-container{\n                  width: 100%;\n                  color:#1ed760;\n                  display:flex;\n                  flex-direction: column;\n                  justify-content: center;\n                  align-items: center;\n              }\n          \n          `;
+        this.appendChild(style);
+    }
+}
+customElements.define("custom-title", CustomTitle);
 
 },{}]},["gcK6j","4L6tv"], "4L6tv", "parcelRequire79e7")
 

@@ -9,3 +9,4 @@ import "./pages/about/index";
 //components
 import "./components/menu/index";
 import "./components/footer/index";
+import "./components/custom-title/index";

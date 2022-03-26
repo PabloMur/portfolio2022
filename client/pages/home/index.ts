@@ -8,7 +8,6 @@ class HomePage extends HTMLElement {
         <div class="home-page">
             <custom-menu></custom-menu>
             <div class="banner">
-                <div class="cicleOne"></div>
                 <h1 class="banner-main">Hi, I am Pablo!</h1>
                 <h3>full-stack developer</h3>
             </div>
@@ -24,7 +23,7 @@ class HomePage extends HTMLElement {
         .banner{
             background:rgb(41,65,171);
             width: 100%;
-            height:88vh;
+            height:100vh;
             padding: 20px;
             color:#1ed760;
             overflow: hidden;

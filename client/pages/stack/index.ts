@@ -1,3 +1,10 @@
+const javascript = require("url:./img/js.png");
+const typescript = require("url:./img/typescript.png");
+const html = require("url:./img/html-5.png");
+const css = require("url:./img/css-3.png");
+const git = require("url:./img/git.png");
+const node = require("url:./img/nodo-js.png");
+
 class Stack extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -10,7 +17,14 @@ class Stack extends HTMLElement {
                 <div class="banner">
                     <div class="cicleOne"></div>
                     <h1 class="banner-main">Stack</h1>
-                    <h3>full-stack developer</h3>
+                    <ul class="stack-list">
+                      <li><img src="${javascript}"/></li>
+                      <li><img src="${typescript}"/></li>
+                      <li><img src="${html}"/></li>
+                      <li><img src="${css}"/></li>
+                      <li><img src="${git}"/></li>
+                      <li><img src="${node}"/></li>
+                    </ul>
                 </div>
                 <custom-footer></custom-footer>
             </div>
@@ -35,7 +49,6 @@ class Stack extends HTMLElement {
                 align-items: center;
             }
             .banner-main{
-              height: 25vh;
               font-size: 80px;
               font-weight: 700;
             }
@@ -47,7 +60,19 @@ class Stack extends HTMLElement {
                 border-radius:200px;
                 top:-150px;
                 right:-150px;
-        
+            }
+            .stack-list{
+              display:flex;
+              width: 40%;
+              justify-content: space-between;
+              padding:0;
+              margin: 0 auto;
+            }
+            img{
+              height:75px;
+              width:75px;
+              box-shadow: 0 0 15px black;
+            }
         `;
     this.appendChild(style);
   }

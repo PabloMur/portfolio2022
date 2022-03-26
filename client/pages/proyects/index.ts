@@ -10,6 +10,7 @@ class Proyects extends HTMLElement {
               <div class="banner">
                   <div class="cicleOne"></div>
                   <h1 class="banner-main">Proyects</h1>
+                  <custom-title>Proyects</custom-title>
                   <h3>full-stack developer</h3>
               </div>
               <custom-footer></custom-footer>

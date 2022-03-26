@@ -10,7 +10,10 @@
     "parcel": "^2.0.0-rc.0"
   },
   "scripts": {
-    "dev:front":"parcel serve ./client/index.html",
-    "build:front":"parcel build ./client/index.html"
+    "dev:front": "parcel serve ./client/index.html",
+    "build:front": "parcel build ./client/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-rc.0"
   }
 }
