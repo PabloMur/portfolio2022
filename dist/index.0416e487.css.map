@@ -1,1 +1,0 @@
-{"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","sources":["client/index.css"],"sourcesContent":["* {\n  box-sizing: border-box;\n  font-family: \"Oswald\", sans-serif;\n}\n\nbody {\n  background-color: rgb(10, 10, 10);\n  padding: 0;\n  margin: 0;\n}\n"],"names":[],"version":3,"file":"index.0416e487.css.map","sourceRoot":"/__parcel_source_root/"}
