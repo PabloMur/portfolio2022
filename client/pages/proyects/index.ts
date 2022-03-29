@@ -9,7 +9,6 @@ class Proyects extends HTMLElement {
               <custom-menu></custom-menu>
               <div class="banner">
                   <div class="cicleOne"></div>
-                  <h1 class="banner-main">Proyects</h1>
                   <custom-title>Proyects</custom-title>
                   <h3>full-stack developer</h3>
               </div>

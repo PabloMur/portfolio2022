@@ -1,3 +1,5 @@
+const fondo = require("url:./img/fondoHome.jpg");
+
 class HomePage extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -8,7 +10,7 @@ class HomePage extends HTMLElement {
         <div class="home-page">
             <custom-menu></custom-menu>
             <div class="banner">
-                <h1 class="banner-main">Hi, I am Pablo!</h1>
+                <custom-title>Hi, I am Pablo!</custom-title>
                 <h3>full-stack developer</h3>
             </div>
             <custom-footer></custom-footer>
@@ -19,9 +21,10 @@ class HomePage extends HTMLElement {
             height:140vh;
             width:100%;
             padding-bottom:0;
-        }
-        .banner{
+          }
+          .banner{
             background:rgb(41,65,171);
+            background-image: url(${fondo})
             width: 100%;
             height:100vh;
             padding: 20px;

@@ -16,7 +16,7 @@ class Stack extends HTMLElement {
                 <custom-menu></custom-menu>
                 <div class="banner">
                     <div class="cicleOne"></div>
-                    <h1 class="banner-main">Stack</h1>
+                    <custom-title>Stack</custom-title>
                     <ul class="stack-list">
                       <li><img src="${javascript}"/></li>
                       <li><img src="${typescript}"/></li>
@@ -48,10 +48,6 @@ class Stack extends HTMLElement {
                 justify-content: center;
                 align-items: center;
             }
-            .banner-main{
-              font-size: 80px;
-              font-weight: 700;
-            }
             .cicleOne{
                 position:absolute;
                 height:300px;
@@ -71,9 +67,13 @@ class Stack extends HTMLElement {
             img{
               height:75px;
               width:75px;
-              box-shadow: 0 0 15px black;
+              
             }
         `;
+
+    const stackList = document.querySelectorAll(".stack-list li");
+    console.log(stackList);
+
     this.appendChild(style);
   }
 }

@@ -9,7 +9,7 @@ class Contact extends HTMLElement {
                   <custom-menu></custom-menu>
                   <div class="banner">
                       <div class="cicleOne"></div>
-                      <h1 class="banner-main">Contact</h1>
+                      <custom-title>Contact</custom-title>
                       <h3>full-stack developer</h3>
                   </div>
                   <custom-footer></custom-footer>

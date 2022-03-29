@@ -44,6 +44,11 @@ class CustomMenu extends HTMLElement {
         li{
             list-style:none;
         }
+        .logo-name{
+            font-size: 30px;
+            letter-spacing: 2px;
+            margin-left: 30px;
+        }
         a{
             color: white;
             text-decoration: none;

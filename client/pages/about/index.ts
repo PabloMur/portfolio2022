@@ -9,7 +9,7 @@ class About extends HTMLElement {
                   <custom-menu></custom-menu>
                   <div class="banner">
                       <div class="cicleOne"></div>
-                      <h1 class="banner-main">About Me</h1>
+                      <custom-title>About Me</custom-title>
                       <h3>full-stack developer</h3>
                   </div>
                   <custom-footer></custom-footer>
