@@ -9,30 +9,29 @@ class Contact extends HTMLElement {
                   <custom-menu></custom-menu>
                   <div class="banner">
                       <div class="cicleOne"></div>
-                      <custom-title>Contact</custom-title>
-                      <h3>full-stack developer</h3>
+                      <custom-title>Contact</custom-title>                      
                   </div>
                   <custom-footer></custom-footer>
               </div>
             `;
     style.innerHTML = `
               .home-page{
-                  height:140vh;
-                  width:100%;
-                  padding-bottom:0;
+                height:140vh;
+                width:100%;
+                padding-bottom:0;
               }
               .banner{
-                  background:rgb(41,65,171);
-                  width: 100%;
-                  min-height:100vh;
-                  padding: 20px;
-                  color:#1ed760;
-                  overflow: hidden;
-                  position:relative;
-                  display:flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
+                background:black;
+                width: 100%;
+                min-height:100vh;
+                padding: 20px;
+                color:#1ed760;
+                overflow: hidden;
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
               }
               .banner-main{
                 height: 25vh;
@@ -40,16 +39,19 @@ class Contact extends HTMLElement {
                 font-weight: 700;
               }
               .cicleOne{
-                  position:absolute;
-                  height:300px;
-                  width:300px;
-                  background-color:#1ed760;
-                  border-radius:200px;
-                  top:-150px;
-                  right:-150px;
-          
+                position:absolute;
+                height:300px;
+                width:100%;
+                background-color:#1ed760;
+                border-radius:100%;
+                top:95vh;   
+              }
           `;
     this.appendChild(style);
+  }
+  iconAnimation() {
+    this.render();
+    const icons = document.querySelectorAll(".");
   }
 }
 customElements.define("contact-page", Contact);

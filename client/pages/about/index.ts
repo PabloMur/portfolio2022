@@ -6,7 +6,7 @@ class About extends HTMLElement {
     const style = document.createElement("style");
     this.innerHTML = `
               <div class="home-page">
-                  <custom-menu></custom-menu>
+              <custom-menu></custom-menu>
                   <div class="banner">
                       <div class="cicleOne"></div>
                       <custom-title>About Me</custom-title>
@@ -22,7 +22,7 @@ class About extends HTMLElement {
                   padding-bottom:0;
               }
               .banner{
-                  background:rgb(41,65,171);
+                  background:black;
                   width: 100%;
                   min-height:100vh;
                   padding: 20px;

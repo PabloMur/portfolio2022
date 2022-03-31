@@ -22,7 +22,7 @@ class Proyects extends HTMLElement {
               padding-bottom:0;
           }
           .banner{
-              background:rgb(41,65,171);
+              background:black;
               width: 100%;
               min-height:100vh;
               padding: 20px;
