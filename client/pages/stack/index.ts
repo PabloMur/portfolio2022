@@ -57,7 +57,6 @@ class Stack extends HTMLElement {
               justify-content: space-between;
               padding:0;
               margin: 0 auto;
-          
             }
 
             img{
