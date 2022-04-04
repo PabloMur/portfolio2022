@@ -53,10 +53,11 @@ class Stack extends HTMLElement {
 
             .stack-list{
               display:flex;
-              width: 40%;
+              width: 50%;
               justify-content: space-between;
               padding:0;
               margin: 0 auto;
+          
             }
 
             img{
