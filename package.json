@@ -1,20 +1,19 @@
 {
   "name": "portfolio2022",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:PabloMur/portfolio2022.git",
   "author": "Pablo <pablomurillo.sp@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.23",
     "@vaadin/router": "^1.7.4",
-    "parcel": "^2.4.0"
+    "parcel": "^2.0.0-rc.0"
   },
   "scripts": {
     "dev:front": "parcel serve ./client/index.html",
     "build:front": "parcel build ./client/index.html"
   },
   "devDependencies": {
-    "@parcel/transformer-image": "2.0.0-rc.0"
+    "@parcel/transformer-image": "^2.0.0-rc.0"
   }
 }
