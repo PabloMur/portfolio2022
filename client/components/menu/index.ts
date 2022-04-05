@@ -31,7 +31,7 @@ class CustomMenu extends HTMLElement {
             color:white;
             padding:10px;
             position:fixed;
-            z-index:3;
+            z-index:10;
         }
         .nav-list{
             display:flex;
@@ -43,6 +43,11 @@ class CustomMenu extends HTMLElement {
 
         li{
             list-style:none;
+            height: 12vh;
+            min-width: 6.1vw;
+            display: flex;
+            justify-content: center;
+            align-items:center;
         }
         .logo-name{
             font-size: 30px;
@@ -54,7 +59,7 @@ class CustomMenu extends HTMLElement {
             text-decoration: none;
         }
         a:hover{
-            color:rgb(85,215,96);
+            color:orange;
         }
     `;
     this.appendChild(style);

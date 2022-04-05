@@ -19,6 +19,7 @@ class Stack extends HTMLElement {
                 <div class="banner">
                     <div class="cicleOne"></div>
                     <custom-title>Stack</custom-title>
+                    <p class="parrafo">Estas son algunas de las tecnologias que estoy utilizando actualmente.</p>
                     <ul class="stack-list">
                       <li><img src="${javascript}"/></li>
                       <li><img src="${typescript}"/></li>
@@ -63,6 +64,11 @@ class Stack extends HTMLElement {
               height:75px;
               width:75px;
               margin: 10px;
+            }
+
+            .parrafo{
+              padding: 20px;
+              color:white;
             }
 
             @keyframes aparecerIcon{

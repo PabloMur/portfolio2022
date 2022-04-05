@@ -19,7 +19,7 @@ class HomePage extends HTMLElement {
                   </p>
                 </div>
                 <div class="cicleTwo"></div>
-                <div class="cicleOne"></div>
+                
                 <div class="cicleThree"></div>
                 <div class="cicleFour"></div>
             </div>
@@ -33,7 +33,6 @@ class HomePage extends HTMLElement {
           padding-bottom:0;
         }
         .banner{
-          background:black;
           width: 100%;
           height:100vh;
           padding: 20px;
@@ -52,16 +51,25 @@ class HomePage extends HTMLElement {
         }
         .banner-text-container{
           width: 70%;
-          background: black;
           border-radius: 25px;
-          position: relative;
           z-index: 6;
           padding:70px;
           margin: 0 auto;
           margin-top: 15vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background:#ffffff08;
+          backdrop-filter: blur(60px);
+          position: relative;
+          box-shadow: 5px 5px 5px rgb(0 0 0 / 13%);
+          border: 0.1px #ffffff12 solid;
         }
         .banner-parrafo{
           font-size:24px;
+          
+          
         }
         .cicleOne{
           position:absolute;
@@ -77,40 +85,39 @@ class HomePage extends HTMLElement {
           position:absolute;
           height:700px;
           width:700px;
-          border:300px #1ed760 solid;
+          border:150px #290056 solid;
           border-radius:50%;
-          top:270px;
+          top:0px;
           right:-300px;
           animation: 2s flotar;
+          
         }
         .cicleThree{
           position:absolute;
           height:800px;
           width:800px;
-          background: #1ed760;
+          background: orange;
           border-radius:400px;
           top:450px;
           left:-200px;
           animation: 2s flotar;
+          
         }
         .cicleFour{
           position:absolute;
-          height:420px;
-          width:420px;
-          border:4px #1ed760 solid;
+          height:160px;
+          width:160px;
+          border:25px #1ed760 solid;
           border-radius:400px;
-          top:-200px;
-          left:-200px;
+          top:10vh;
+          left:10vw;
           animation: 2s flotar;
         }
-        .cicleFour:hover,
-        .cicleThree:hover{
-          opacity:0;
-        }
+        
         @keyframes flotar{
           from{
             opacity:0;
-            top: 5%;
+            top: 100%;
           }
           to{
             opacity:1;
