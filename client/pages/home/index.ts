@@ -36,7 +36,6 @@ class HomePage extends HTMLElement {
           width: 100%;
           height:100vh;
           padding: 20px;
-          color:#1ed760;
           overflow: hidden;
           position:relative;
           display:flex;
@@ -65,6 +64,7 @@ class HomePage extends HTMLElement {
           position: relative;
           box-shadow: 5px 5px 5px rgb(0 0 0 / 13%);
           border: 0.1px #ffffff12 solid;
+          color:#1ed760;
         }
         .banner-parrafo{
           font-size:24px;

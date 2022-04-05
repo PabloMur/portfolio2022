@@ -10,7 +10,7 @@ class Proyects extends HTMLElement {
               <div class="banner">
                   <div class="cicleOne"></div>
                   <custom-title>Proyects</custom-title>
-                  <h3>full-stack developer</h3>
+                  <div class="card-container"></div>
               </div>
               <custom-footer></custom-footer>
           </div>
@@ -22,7 +22,7 @@ class Proyects extends HTMLElement {
               padding-bottom:0;
           }
           .banner{
-              background:black;
+              background-image: linear-gradient(to right,red,blue);
               width: 100%;
               min-height:100vh;
               padding: 20px;

@@ -19,7 +19,7 @@ class Stack extends HTMLElement {
                 <div class="banner">
                     <div class="cicleOne"></div>
                     <custom-title>Stack</custom-title>
-                    <p class="parrafo">Estas son algunas de las tecnologias que estoy utilizando actualmente.</p>
+                    
                     <ul class="stack-list">
                       <li><img src="${javascript}"/></li>
                       <li><img src="${typescript}"/></li>
@@ -39,7 +39,7 @@ class Stack extends HTMLElement {
                 padding-bottom:0;
             }
             .banner{
-                background:black;
+                background:orange;
                 width: 100%;
                 min-height:100vh;
                 padding: 20px;
@@ -61,8 +61,8 @@ class Stack extends HTMLElement {
             }
 
             img{
-              height:75px;
-              width:75px;
+              height:80px;
+              width:80px;
               margin: 10px;
             }
 
