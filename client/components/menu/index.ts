@@ -7,14 +7,14 @@ class CustomMenu extends HTMLElement {
     this.innerHTML = `
             <div class="menu-container">
                 <div class="menu-logo">
-                    <h3 class="logo-name"><a href="/">Pablo Murillo</a></h3>
+                    <h3 class="logo-name"><a class="nav-list-link" href="/">Pablo Murillo</a></h3>
                 </div>
                 <nav class="menu-nav">
                     <ul class="nav-list">
-                        <li><a href="/stack">Stack</a></li>
-                        <li><a href="/proyects">Proyects</a></li>
-                        <li><a href="/about">About Me</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a class="nav-list-link" href="/stack">Stack</a></li>
+                        <li><a class="nav-list-link" href="/proyects">Proyects</a></li>
+                        <li><a class="nav-list-link" href="/about">About Me</a></li>
+                        <li><a class="nav-list-link" href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -54,11 +54,11 @@ class CustomMenu extends HTMLElement {
             letter-spacing: 2px;
             margin-left: 30px;
         }
-        a{
+        .nav-list-link{
             color: white;
             text-decoration: none;
         }
-        a:hover{
+        .nav-list-link:hover{
             color:orange;
         }
     `;

@@ -10,3 +10,4 @@ import "./pages/about/index";
 import "./components/menu/index";
 import "./components/footer/index";
 import "./components/custom-title/index";
+import "./components/card/index";

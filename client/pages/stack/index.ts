@@ -17,9 +17,9 @@ class Stack extends HTMLElement {
             <div class="home-page">
                 <custom-menu></custom-menu>
                 <div class="banner">
-                    <div class="cicleOne"></div>
-                    <custom-title>Stack</custom-title>
                     
+                    <custom-title>Stack</custom-title>
+                    <p class="frase">Estas son las principales tecnologias que utilizo.</p>
                     <ul class="stack-list">
                       <li><img src="${javascript}"/></li>
                       <li><img src="${typescript}"/></li>
@@ -39,7 +39,7 @@ class Stack extends HTMLElement {
                 padding-bottom:0;
             }
             .banner{
-                background:orange;
+                background: black;
                 width: 100%;
                 min-height:100vh;
                 padding: 20px;
@@ -61,15 +61,23 @@ class Stack extends HTMLElement {
             }
 
             img{
-              height:80px;
-              width:80px;
-              margin: 10px;
+              height:100px;
+              width:100px;
+              margin: 15spx;
             }
 
-            .parrafo{
-              padding: 20px;
-              color:white;
+            img:hover{
+              transform: scale(1.1)
             }
+
+            .frase{
+              padding-bottom: 30px;
+              color: #fd5aff;
+              font-size: 25px;
+              animation: 1s flotar;
+            }
+
+            
 
             @keyframes aparecerIcon{
               from{
@@ -79,6 +87,16 @@ class Stack extends HTMLElement {
               to{
                 opacity:1;
                 transform: translateY(0);
+              }
+            }
+            @keyframes flotar{
+              from{
+                opacity: 0;
+                
+              }
+              to{
+                opacity:1;
+                
               }
             }
         `;

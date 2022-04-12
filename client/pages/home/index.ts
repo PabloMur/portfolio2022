@@ -32,7 +32,7 @@ class HomePage extends HTMLElement {
           width:100%;
           padding-bottom:0;
         }
-        .banner{
+        .banner{          
           width: 100%;
           height:100vh;
           padding: 20px;
@@ -67,9 +67,7 @@ class HomePage extends HTMLElement {
           color:#1ed760;
         }
         .banner-parrafo{
-          font-size:24px;
-          
-          
+          font-size:24px; 
         }
         .cicleOne{
           position:absolute;
