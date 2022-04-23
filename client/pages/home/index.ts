@@ -66,8 +66,21 @@ class HomePage extends HTMLElement {
           border: 0.1px #ffffff12 solid;
           color:#1ed760;
         }
+        @media (max-width:600px){
+          .banner-text-container{
+            padding:10px;
+            width: 90%;
+            margin-top: 0;
+          }
+        }
         .banner-parrafo{
           font-size:24px; 
+        }
+        @media (max-width:600px){
+          .banner-parrafo{
+            font-size:22px;
+            color: white; 
+          }
         }
         .cicleOne{
           position:absolute;
@@ -79,6 +92,7 @@ class HomePage extends HTMLElement {
           right:-150px;
           animation: 2s flotar linear;
         }
+        
         .cicleTwo{
           position:absolute;
           height:700px;
@@ -98,8 +112,12 @@ class HomePage extends HTMLElement {
           border-radius:400px;
           top:450px;
           left:-200px;
-          animation: 2s flotar;
-          
+          animation: 2s flotar; 
+        }
+        @media (max-width:600px){
+          .cicleThree{
+            display:none;
+          }
         }
         .cicleFour{
           position:absolute;
@@ -110,6 +128,18 @@ class HomePage extends HTMLElement {
           top:10vh;
           left:10vw;
           animation: 2s flotar;
+        }
+        @media (max-width:600px){
+          .cicleFour{
+            
+            height:260px;
+            width:260px;
+            border:45px #1ed760 solid;
+            border-radius:400px;
+            top:10vh;
+            left:0vw;
+            animation: 2s flotar;  
+          }
         }
         
         @keyframes flotar{

@@ -1,6 +1,6 @@
 class CustomMenu extends HTMLElement {
   connectedCallback() {
-    this.render();
+    this.click();
   }
   render() {
     const style = document.createElement("style");
@@ -16,12 +16,18 @@ class CustomMenu extends HTMLElement {
                         <li><a class="nav-list-link" href="/about">About Me</a></li>
                         <li><a class="nav-list-link" href="/contact">Contact</a></li>
                     </ul>
+                    
                 </nav>
+                <button class="nav-burger-logo">
+                  <div class="lineOne"></div>
+                  <div class="lineTwo"></div>
+                  <div class="lineThree"></div>
+                </button>
             </div>
         `;
     style.innerHTML = `
         .menu-container{
-            height: 12vh;
+            height: 11vh;
             width:100%;
             background:black;
             margin-top:0;
@@ -33,12 +39,32 @@ class CustomMenu extends HTMLElement {
             position:fixed;
             z-index:10;
         }
+        @media (max-width: 600px){
+          .menu-container{
+            justify-content: center;
+          }
+        }
         .nav-list{
             display:flex;
             width:400px;
             justify-content: space-between;    
             align-items: center;
             padding-right: 30px;
+        }
+        
+        @media (max-width: 600px) {
+          .nav-list {
+            position:fixed;
+            background: black;
+            width: 100vw;
+            height: 8vh;
+            top: 90vh;
+            left: 0;
+          }
+
+          a{
+            font-weight: bolder;
+          }
         }
 
         li{
@@ -54,6 +80,12 @@ class CustomMenu extends HTMLElement {
             letter-spacing: 2px;
             margin-left: 30px;
         }
+
+        @media (max-width: 600px){
+          .logo-name{
+            font-size: 2rem;
+          }
+        }
         .nav-list-link{
             color: white;
             text-decoration: none;
@@ -61,8 +93,21 @@ class CustomMenu extends HTMLElement {
         .nav-list-link:hover{
             color:orange;
         }
+
+        .nav-burger-logo{
+          display: none;
+          height: 30px;
+          width:30px;
+        }
+        
     `;
     this.appendChild(style);
+  }
+  click() {
+    this.render();
+    let burger = document.querySelector(".nav-burger-logo");
+    let lista = document.querySelector(".nav-list") as any;
+    burger.addEventListener("click", () => (lista.style.display = "flex"));
   }
 }
 

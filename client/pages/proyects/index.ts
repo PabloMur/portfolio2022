@@ -66,7 +66,7 @@ class Proyects extends HTMLElement {
             align-items:start;
             flex-wrap: wrap;
             gap: 20px;            
-            padding: 20px;
+            padding-top: 10vh;
             
           }
           .cicleTwo{

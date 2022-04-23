@@ -3,6 +3,12 @@ class Contact extends HTMLElement {
     this.render();
   }
   render() {
+    //imagenes
+    const gmail = require("url:./img/gmail.png");
+    const instagram = require("url:./img/instagram.png");
+    const github = require("url:./img/github.png");
+    const linkedin = require("url:./img/linkedin.png");
+    //
     const style = document.createElement("style");
     this.innerHTML = `
               <div class="home-page">
@@ -10,8 +16,18 @@ class Contact extends HTMLElement {
                   <div class="banner">
                       <div class="cicleOne"></div>
                       <custom-title>Contact</custom-title>                      
+                      <h3>Podes contactarme en estas redes:</h3>
+                      <div class="redes-container">
+                        <ul class="redes-list">
+                          <li><img src="${linkedin}"/></li>
+                          <li><img src="${github}"/></li>
+                          <li><img src="${instagram}"/></li>
+                          <li><a href="mailto:pablomurillo.sp@gmail.com"><img src="${gmail}"/></a>
+                          </li>
+                        </ul>
+                      </div>
                   </div>
-                  <custom-footer></custom-footer>
+                  
               </div>
             `;
     style.innerHTML = `
@@ -42,9 +58,16 @@ class Contact extends HTMLElement {
                 position:absolute;
                 height:300px;
                 width:100%;
-                background-color:#1ed760;
+                background-color:#9c27b0;
                 border-radius:100%;
                 top:95vh;   
+              }
+              .redes-list{
+                display:flex;
+              }
+              img{
+                height: 50px;
+                width: auto;
               }
           `;
     this.appendChild(style);

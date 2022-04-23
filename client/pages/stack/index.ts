@@ -10,6 +10,9 @@ const node = require("url:./img/nodo-js.png");
 class Stack extends HTMLElement {
   connectedCallback() {
     this.iconAnimation();
+    let burger = document.querySelector(".nav-burger-logo");
+    let lista = document.querySelector(".nav-list") as any;
+    burger.addEventListener("click", (e) => (lista.style.display = "flex"));
   }
   render() {
     const style = document.createElement("style");

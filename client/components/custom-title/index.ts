@@ -22,7 +22,7 @@ class CustomTitle extends HTMLElement {
     
               .title-container h1{
                 animation: .6s aparecer;
-                font-size: 100px;
+                font-size: 5rem;
                 font-weight:700;
               }
 
@@ -32,6 +32,18 @@ class CustomTitle extends HTMLElement {
                 }
                 to{
                   opacity:1;
+                }
+              }
+
+              @media (max-width: 600px){
+                .title-container{
+                  width: 100%;
+                  color: white;
+                }
+
+                .title-container h1{
+                  font-size: 4rem;
+                  
                 }
               }
           
