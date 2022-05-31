@@ -1,6 +1,6 @@
 class Contact extends HTMLElement {
   connectedCallback() {
-    this.render();
+    this.iconAnimation();
   }
   render() {
     //imagenes
@@ -16,14 +16,12 @@ class Contact extends HTMLElement {
                   <div class="banner">
                       <div class="cicleOne"></div>
                       <custom-title>Contact</custom-title>                      
-                      <h3>Podes contactarme en estas redes:</h3>
+                      <p class="frase">Podes contactarme en estas redes:</p>
                       <div class="redes-container">
                         <ul class="redes-list">
                           <li><img src="${linkedin}"/></li>
                           <li><img src="${github}"/></li>
                           <li><img src="${instagram}"/></li>
-                          <li><a href="mailto:pablomurillo.sp@gmail.com"><img src="${gmail}"/></a>
-                          </li>
                         </ul>
                       </div>
                   </div>
@@ -63,18 +61,43 @@ class Contact extends HTMLElement {
                 top:95vh;   
               }
               .redes-list{
+                padding:0;
                 display:flex;
+                justify-content: space-between;
+                align-items:center;
               }
               img{
                 height: 50px;
                 width: auto;
               }
+
+              .frase{
+                padding-bottom: 30px;
+                color: orange;
+                font-size: 25px;
+                animation: 1s flotar;
+              }
+
+              @keyframes aparecerIcon{
+                from{
+                  opacity: 0;
+                  transform: translateY(100%);
+               }
+                to{
+                  opacity:1;
+                  transform: translateY(0);
+                }
+              }
           `;
     this.appendChild(style);
   }
+
   iconAnimation() {
     this.render();
-    const icons = document.querySelectorAll(".");
+    const icons = document.querySelectorAll(".redes-list li");
+    icons.forEach((icon: any, index) => {
+      icon.style.animation = `aparecerIcon ${(index + 1) / 7}s forwards`;
+    });
   }
 }
 customElements.define("contact-page", Contact);
