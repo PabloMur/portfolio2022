@@ -1,5 +1,3 @@
-import { log } from "console";
-
 const javascript = require("url:./img/js.png");
 const typescript = require("url:./img/typescript.png");
 const html = require("url:./img/html-5.png");
