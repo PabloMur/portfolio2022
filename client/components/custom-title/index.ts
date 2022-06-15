@@ -9,7 +9,7 @@ class CustomTitle extends HTMLElement {
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
           <div class="title-container">
             <h1>${this.textContent}</h1>
           </div> 
@@ -53,7 +53,7 @@ class CustomTitle extends HTMLElement {
               }
           
           `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 }
 

@@ -65,6 +65,10 @@ class Stack extends HTMLElement {
               padding:0;
               margin: 0 auto;
             }
+            .stack-list li{
+              list-style:none:
+              text-decoration: none;
+            }
 
             img{
               height:100px;
