@@ -102,7 +102,7 @@ class CustomMenu extends HTMLElement {
         .nav-burger-logo{
           display: none;
           height: 30px;
-          width:30px;
+          width:31px;
         }
         
     `;
