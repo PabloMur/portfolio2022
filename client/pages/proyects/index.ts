@@ -1,10 +1,15 @@
 class Proyects extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.cardsAnimation();
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
           <div class="home-page">
               <custom-menu></custom-menu>
               <div class="banner">
@@ -91,11 +96,13 @@ class Proyects extends HTMLElement {
           }
       
       `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
   cardsAnimation() {
     this.render();
-    const cards = document.querySelectorAll(".cards-container custom-card");
+    const cards = this.shadow.querySelectorAll(
+      ".cards-container custom-card"
+    ) as any;
     cards.forEach((card: any, index) => {
       card.style.animation = `aparecerIcon ${index + 1 / 7}s forwards`;
     });

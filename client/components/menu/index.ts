@@ -1,10 +1,15 @@
 class CustomMenu extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.click();
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
             <div class="menu-container">
                 <div class="menu-logo">
                     <h3 class="logo-name"><a class="nav-list-link" href="/">Pablo Murillo</a></h3>
@@ -101,12 +106,12 @@ class CustomMenu extends HTMLElement {
         }
         
     `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
   click() {
     this.render();
-    let burger = document.querySelector(".nav-burger-logo");
-    let lista = document.querySelector(".nav-list") as any;
+    let burger = this.shadow.querySelector(".nav-burger-logo") as any;
+    let lista = this.shadow.querySelector(".nav-list") as any;
     burger.addEventListener("click", () => (lista.style.display = "flex"));
   }
 }

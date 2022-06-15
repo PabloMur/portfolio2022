@@ -1,4 +1,9 @@
 class Contact extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.iconAnimation();
   }
@@ -10,7 +15,7 @@ class Contact extends HTMLElement {
     const linkedin = require("url:./img/linkedin.png");
     //
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
               <div class="home-page">
                   <custom-menu></custom-menu>
                   <div class="banner">
@@ -89,12 +94,12 @@ class Contact extends HTMLElement {
                 }
               }
           `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 
   iconAnimation() {
     this.render();
-    const icons = document.querySelectorAll(".redes-list li");
+    const icons = this.shadow.querySelectorAll(".redes-list li") as any;
     icons.forEach((icon: any, index) => {
       icon.style.animation = `aparecerIcon ${(index + 1) / 7}s forwards`;
     });

@@ -1,12 +1,16 @@
-const fondo = require("url:./img/fondoHome.jpg");
-
 class HomePage extends HTMLElement {
+  fondo = require("url:./img/fondoHome.jpg");
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.render();
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
         <div class="home-page">
             <custom-menu></custom-menu>
             <div class="banner">
@@ -154,7 +158,7 @@ class HomePage extends HTMLElement {
         }
     
     `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 }
 customElements.define("home-page", HomePage);

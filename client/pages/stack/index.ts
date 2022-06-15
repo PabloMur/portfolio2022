@@ -8,15 +8,20 @@ const git = require("url:./img/git.png");
 const node = require("url:./img/nodo-js.png");
 
 class Stack extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.iconAnimation();
-    let burger = document.querySelector(".nav-burger-logo");
+    let burger = this.shadow.querySelector(".nav-burger-logo") as any;
     let lista = document.querySelector(".nav-list") as any;
     burger.addEventListener("click", (e) => (lista.style.display = "flex"));
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
             <div class="home-page">
                 <custom-menu></custom-menu>
                 <div class="banner">
@@ -104,11 +109,11 @@ class Stack extends HTMLElement {
             }
         `;
 
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
   iconAnimation() {
     this.render();
-    const icons = document.querySelectorAll(".stack-list li");
+    const icons = this.shadow.querySelectorAll(".stack-list li") as any;
     icons.forEach((icon: any, index) => {
       icon.style.animation = `aparecerIcon ${(index + 1) / 7}s forwards`;
     });

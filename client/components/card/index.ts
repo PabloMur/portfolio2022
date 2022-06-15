@@ -1,4 +1,9 @@
 class Card extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.render();
   }
@@ -7,7 +12,8 @@ class Card extends HTMLElement {
     const title = this.getAttribute("title");
     const description = this.getAttribute("description");
     const imagen = this.getAttribute("img");
-    this.innerHTML = `
+
+    this.shadow.innerHTML = `
             <div class="card-elements-container">
                 <img src=${imagen} alt="" class="card-imagen"/>
                 <h3 class="card-title">Proyecto uno ${title}</h3>
@@ -17,6 +23,7 @@ class Card extends HTMLElement {
                 </div>
             </div>
         `;
+
     style.innerHTML = `
 			.card-elements-container{
 				background:red;
@@ -54,7 +61,7 @@ class Card extends HTMLElement {
         font-weight: bolder;
       }
 		`;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 }
 

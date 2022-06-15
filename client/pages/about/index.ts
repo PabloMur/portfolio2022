@@ -1,11 +1,16 @@
 class About extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.render();
   }
   render() {
     const style = document.createElement("style");
     const imagenperfil = require("url:./img/perfil.jpg");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
               <div class="home-page">
               <custom-menu></custom-menu>
                   <div class="banner">
@@ -62,7 +67,7 @@ class About extends HTMLElement {
               }
           
           `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 }
 customElements.define("about-page", About);

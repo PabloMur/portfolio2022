@@ -1,10 +1,15 @@
 class Footer extends HTMLElement {
+  shadow: ShadowRoot;
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     this.render();
   }
   render() {
     const style = document.createElement("style");
-    this.innerHTML = `
+    this.shadow.innerHTML = `
         <div class="footer-container">
           <span> derechos 2022/2023</span>
         </div> 
@@ -23,7 +28,7 @@ class Footer extends HTMLElement {
             }
         
         `;
-    this.appendChild(style);
+    this.shadow.appendChild(style);
   }
 }
 

@@ -7,11 +7,18 @@
   "dependencies": {
     "@types/node": "^17.0.23",
     "@vaadin/router": "^1.7.4",
-    "parcel": "^2.4.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "parcel": "^2.4.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
   },
   "scripts": {
     "dev:front": "parcel serve ./client/index.html",
-    "build:front": "parcel build ./client/index.html"
+    "build:front": "parcel build ./client/index.html",
+    "build:api": "tsc",
+    "build": "yarn build:front && yarn build:api",
+    "start": "node ./server/index.js"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0"
