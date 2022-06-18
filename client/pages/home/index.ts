@@ -17,7 +17,7 @@ class HomePage extends HTMLElement {
                 <div class="banner-text-container">
                   <custom-title>Hola, soy Pablo!</custom-title>
                   <p class="banner-parrafo">
-                    Estudiante de la carrera de Desarrollador Web Full-Stack en <a href="https://apx.school/" target="_blank">APX</a>.
+                    Estudiante de la carrera de Desarrollador Web Full-Stack en <a class="link-apx" href="https://apx.school/" target="_blank">APX</a>.
                     </br>
                     Este es mi portafolio, espero que lo disfruten!
                   </p>
@@ -73,17 +73,25 @@ class HomePage extends HTMLElement {
         @media (max-width:600px){
           .banner-text-container{
             padding:10px;
-            width: 90%;
-            margin-top: 0;
+            width: 80vw;
+            background: black;
+            height: 70vh;
+            margin-top:6vh;
+            
           }
+        }
+        .link-apx{
+          text-decoration: none;
+          color: orange;
         }
         .banner-parrafo{
           font-size:24px; 
         }
         @media (max-width:600px){
           .banner-parrafo{
-            font-size:22px;
-            color: white; 
+            font-size:2.2em;
+            padding: 10%;
+            margin-bottom: 10vh;
           }
         }
         .cicleOne{
@@ -118,11 +126,6 @@ class HomePage extends HTMLElement {
           left:-200px;
           animation: 2s flotar; 
         }
-        @media (max-width:600px){
-          .cicleThree{
-            display:none;
-          }
-        }
         .cicleFour{
           position:absolute;
           height:160px;
@@ -134,8 +137,7 @@ class HomePage extends HTMLElement {
           animation: 2s flotar;
         }
         @media (max-width:600px){
-          .cicleFour{
-            
+          .cicleFour{        
             height:260px;
             width:260px;
             border:45px #1ed760 solid;

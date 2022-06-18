@@ -43,12 +43,13 @@ class CustomTitle extends HTMLElement {
               @media (max-width: 600px){
                 .title-container{
                   width: 100%;
-                  color: white;
+                  height: 6vh;
+                  margin-top: 10vh;
                 }
 
                 .title-container h1{
-                  font-size: 4rem;
-                  
+                  font-size: 50px;
+
                 }
               }
           
