@@ -35,11 +35,11 @@ class HomePage extends HTMLElement {
           height:140vh;
           width:100%;
           padding-bottom:0;
+          overflow:hidden;
         }
         .banner{          
           width: 100%;
           height:100vh;
-          padding: 20px;
           overflow: hidden;
           position:relative;
           display:flex;

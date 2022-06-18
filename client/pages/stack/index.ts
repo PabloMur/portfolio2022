@@ -66,7 +66,7 @@ class Stack extends HTMLElement {
               margin: 0 auto;
             }
             .stack-list li{
-              list-style:none:
+              list-style:none;
               text-decoration: none;
             }
 
