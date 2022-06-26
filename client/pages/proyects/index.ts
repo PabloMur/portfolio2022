@@ -31,9 +31,22 @@ class Proyects extends HTMLElement {
                     </custom-card>
 
                     <custom-card 
+                      title="Juego Piedra, Papel o Tijera" 
+                      description="Este es el trdicional juego, en el que podremos enfrentarnos a la PC. Tanto nuestro score como el de la maquina seran almacenados en el localStorage. Ademas, estamos ante la implementacion de una single page aplication, componentes, state managment y ruteo."
+                      img="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                    </custom-card>
+
+                    <custom-card 
+                      title="Juego Piedra, Papel o Tijera" 
+                      description="Este es el trdicional juego, en el que podremos enfrentarnos a la PC. Tanto nuestro score como el de la maquina seran almacenados en el localStorage. Ademas, estamos ante la implementacion de una single page aplication, componentes, state managment y ruteo."
+                      img="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                    </custom-card>
+
+                    <custom-card 
                       title="Chatroom"
                       description="Seguimos desarrollando la implementacion de una single page appilcation, pero, en esta oportunidad sumamos el uso de bases de datos no relacionales. Mas precisamente Firestore y Firebase Realtime Data Bese, de la mano de Firebase. Por otro lado tambien construimos una REST API cons express. Y lo documentamos con Postman."
-                      img="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></custom-card>
+                      img="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                    </custom-card>
                   </div>
               </div>
               <custom-footer></custom-footer>
@@ -71,7 +84,7 @@ class Proyects extends HTMLElement {
             align-items:start;
             flex-wrap: wrap;
             gap: 20px;            
-            padding-top: 10vh;
+            padding: 10vh 0;
             
           }
           .cicleTwo{
@@ -82,6 +95,12 @@ class Proyects extends HTMLElement {
             border-radius:50%;
             top:350px;
             animation: 1s flotar;
+          }
+
+          @media (max-width: 600px){
+            custom-card{
+              margin:0 auto;
+            }
           }
 
           @keyframes aparecerIcon{

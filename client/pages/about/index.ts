@@ -9,7 +9,7 @@ class About extends HTMLElement {
   }
   render() {
     const style = document.createElement("style");
-    const imagenperfil = require("url:./img/perfil.jpg");
+    const imagenperfil = require("url:./img/perfil.jpeg");
     this.shadow.innerHTML = `
               <div class="home-page">
               <custom-menu></custom-menu>

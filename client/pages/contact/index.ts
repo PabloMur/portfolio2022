@@ -30,7 +30,6 @@ class Contact extends HTMLElement {
                         </ul>
                       </div>
                   </div>
-                  
               </div>
             `;
     style.innerHTML = `
@@ -43,7 +42,6 @@ class Contact extends HTMLElement {
                 background:black;
                 width: 100%;
                 min-height:100vh;
-                padding: 20px;
                 color:#1ed760;
                 overflow: hidden;
                 position:relative;

@@ -48,7 +48,6 @@ class Stack extends HTMLElement {
                 background: black;
                 width: 100%;
                 min-height:100vh;
-                padding: 20px;
                 color:#1ed760;
                 overflow: hidden;
                 position:relative;
@@ -64,6 +63,14 @@ class Stack extends HTMLElement {
               justify-content: space-between;
               padding:0;
               margin: 0 auto;
+            }
+
+            @media (max-width: 600px){
+              .stack-list{
+                flex-wrap: wrap;
+                width: 82%;
+                gap: 10px;
+              }
             }
             .stack-list li{
               list-style:none;
@@ -85,6 +92,12 @@ class Stack extends HTMLElement {
               color: #fd5aff;
               font-size: 25px;
               animation: 1s flotar;
+            }
+
+            @media (max-width: 600px){
+              .frase{
+                text-align: center;
+              }
             }
 
             

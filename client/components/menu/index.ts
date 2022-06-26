@@ -48,6 +48,17 @@ class CustomMenu extends HTMLElement {
           .menu-container{
             justify-content: center;
           }
+          .menu-nav{
+            position: absolute;
+            top: 13vh;
+            width:100%;
+            background: black;
+            height: 87vh;
+            overflow:hidden;
+            display: none;
+            justify-content: center;
+            align-items:center;
+          }
         }
         .nav-list{
             display:flex;
@@ -59,12 +70,11 @@ class CustomMenu extends HTMLElement {
         
         @media (max-width: 600px) {
           .nav-list {
-            position:fixed;
-            background: black;
-            width: 100vw;
-            height: 8vh;
-            top: 90vh;
-            left: 0;
+            background: orange;
+            width: 100%;
+            height: 60vh;
+            flex-direction: column;
+            padding: 0;
           }
 
           a{
@@ -80,6 +90,12 @@ class CustomMenu extends HTMLElement {
             justify-content: center;
             align-items:center;
         }
+        @media (max-width: 600px){
+          li{
+            background:red;
+            width: 100%;
+          }
+        }
         .logo-name{
             font-size: 30px;
             letter-spacing: 2px;
@@ -89,6 +105,7 @@ class CustomMenu extends HTMLElement {
         @media (max-width: 600px){
           .logo-name{
             font-size: 2rem;
+            margin-left:0;
           }
         }
         .nav-list-link{

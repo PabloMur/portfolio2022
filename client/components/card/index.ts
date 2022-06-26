@@ -16,7 +16,7 @@ class Card extends HTMLElement {
     this.shadow.innerHTML = `
             <div class="card-elements-container">
                 <img src=${imagen} alt="" class="card-imagen"/>
-                <h3 class="card-title">Proyecto uno ${title}</h3>
+                <h3 class="card-title">${title}</h3>
                 <p class="card-description">${description}</p>
                 <div class="card-link">
                   <a class="card-link-a" href="#">view at github</a>
@@ -37,6 +37,11 @@ class Card extends HTMLElement {
 				border: 1px solid white;
         box-shadow: 3px 3px 6px 0px #0e0e0eb0;
 			}
+      @media (max-width:600px){
+        .card-elements-container{
+          width: 85vw;
+        }
+      }
       .card-imagen{
         background: red;
         height: 40vh;
