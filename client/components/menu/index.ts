@@ -14,7 +14,7 @@ class CustomMenu extends HTMLElement {
                 <div class="menu-logo">
                     <h3 class="logo-name"><a class="nav-list-link" href="/">Pablo Murillo</a></h3>
                 </div>
-                <nav class="menu-nav">
+                <nav class="menu-nav escondido">
                     <ul class="nav-list">
                         <li><a class="nav-list-link" href="/stack">Stack</a></li>
                         <li><a class="nav-list-link" href="/proyects">Proyects</a></li>
@@ -23,14 +23,21 @@ class CustomMenu extends HTMLElement {
                     </ul>
                     
                 </nav>
-                <button class="nav-burger-logo">
+                <div class="nav-burger-logo">
                   <div class="lineOne"></div>
                   <div class="lineTwo"></div>
                   <div class="lineThree"></div>
-                </button>
+                </div>
             </div>
         `;
     style.innerHTML = `
+        .escondido{
+          display: none;
+        }
+        .mostrado{
+          display:inherit;
+        }
+
         .menu-container{
             height: 11vh;
             width:100%;
@@ -46,7 +53,8 @@ class CustomMenu extends HTMLElement {
         }
         @media (max-width: 600px){
           .menu-container{
-            justify-content: center;
+            width:96%;
+            justify-content: space-around;
           }
           .menu-nav{
             position: absolute;
@@ -55,7 +63,6 @@ class CustomMenu extends HTMLElement {
             background: black;
             height: 87vh;
             overflow:hidden;
-            display: none;
             justify-content: center;
             align-items:center;
           }
@@ -70,7 +77,6 @@ class CustomMenu extends HTMLElement {
         
         @media (max-width: 600px) {
           .nav-list {
-            background: orange;
             width: 100%;
             height: 60vh;
             flex-direction: column;
@@ -92,8 +98,10 @@ class CustomMenu extends HTMLElement {
         }
         @media (max-width: 600px){
           li{
-            background:red;
-            width: 100%;
+            background: #ab39ad;
+            width: 50%;
+            font-size: 30px;
+            
           }
         }
         .logo-name{
@@ -118,8 +126,21 @@ class CustomMenu extends HTMLElement {
 
         .nav-burger-logo{
           display: none;
-          height: 30px;
-          width:31px;
+        }
+        @media (max-width: 600px){
+          .nav-burger-logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 30px;
+            width:31px;
+          }
+
+          .lineOne, .lineTwo, .lineThree{
+            background: #1ed760;
+            height: 25%;
+            border-radius: 3px;
+          }
         }
         
     `;
@@ -128,8 +149,8 @@ class CustomMenu extends HTMLElement {
   click() {
     this.render();
     let burger = this.shadow.querySelector(".nav-burger-logo") as any;
-    let lista = this.shadow.querySelector(".nav-list") as any;
-    burger.addEventListener("click", () => (lista.style.display = "flex"));
+    let lista = this.shadow.querySelector(".menu-nav") as any;
+    burger.addEventListener("click", () => lista.classList.toggle("mostrado"));
   }
 }
 
