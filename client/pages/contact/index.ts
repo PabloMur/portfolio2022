@@ -24,7 +24,7 @@ class Contact extends HTMLElement {
                       <p class="frase">Podes contactarme en estas redes:</p>
                       <div class="redes-container">
                         <ul class="redes-list">
-                          <li><img src="${linkedin}"/></li>
+                          <li><a href="https://github.com/PabloMur" target="_blank"><img src="${linkedin}"/></a></li>
                           <li><img src="${github}"/></li>
                           <li><img src="${instagram}"/></li>
                         </ul>
