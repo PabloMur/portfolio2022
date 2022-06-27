@@ -42,6 +42,12 @@ class About extends HTMLElement {
                 align-items: center;
                 gap: 50px;
               }
+
+              @media (max-width:600px){
+                .banner{
+                  flex-direction:column;
+                }
+              }
               .banner-main{
                 height: 25vh;
                 font-size: 80px;
@@ -53,6 +59,13 @@ class About extends HTMLElement {
                 justify-content: center;
                 align-items: start;
               }
+
+              @media (max-width: 600px){
+                .texto{
+                  align-items: center;
+                }
+              }
+
               .cicleOne{
                   height:400px;
                   width:400px;
@@ -61,6 +74,14 @@ class About extends HTMLElement {
                   background-image: url(${imagenperfil});
                   background-size: cover;
               }
+              @media (max-width: 600px){
+                .cicleOne{
+                  margin-top: 5vh;
+                  width: 80vw;
+                  height: 80vw;
+                }
+              }
+
               .parrafo{
                 max-width: 600px;
                 color: white;
