@@ -67,8 +67,8 @@ class About extends HTMLElement {
               }
 
               .cicleOne{
-                  height:400px;
-                  width:400px;
+                  height:350px;
+                  width:350px;
                   background-color:#1ed760;
                   border-radius:200px;
                   background-image: url(${imagenperfil});
@@ -85,6 +85,14 @@ class About extends HTMLElement {
               .parrafo{
                 max-width: 600px;
                 color: white;
+              }
+              @media (max-width: 600px){
+                .parrafo{
+                  background: #ab39ad;
+                  width: 85%;
+                  padding: 10px;
+                  font-size: 1.8rem;
+                }
               }
           
           `;

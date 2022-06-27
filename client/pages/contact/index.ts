@@ -68,10 +68,19 @@ class Contact extends HTMLElement {
                 display:flex;
                 justify-content: space-between;
                 align-items:center;
+                width: 200px;
               }
+
+             
+
               img{
                 height: 50px;
                 width: auto;
+              }
+
+              li{
+                text-decoration: none;
+                list-style: none;
               }
 
               .frase{
