@@ -68,7 +68,7 @@ class Stack extends HTMLElement {
             @media (max-width: 600px){
               .stack-list{
                 flex-wrap: wrap;
-                width: 82%;
+                width: 60%;
                 gap: 10px;
               }
             }
@@ -97,6 +97,7 @@ class Stack extends HTMLElement {
             @media (max-width: 600px){
               .frase{
                 text-align: center;
+                padding: 10vw;
               }
             }
 

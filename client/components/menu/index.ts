@@ -14,7 +14,16 @@ class CustomMenu extends HTMLElement {
                 <div class="menu-logo">
                     <h3 class="logo-name"><a class="nav-list-link" href="/">Pablo Murillo</a></h3>
                 </div>
-                <nav class="menu-nav escondido">
+                <nav class="menu-nav">
+                    <ul class="nav-list">
+                        <li><a class="nav-list-link" href="/stack">Stack</a></li>
+                        <li><a class="nav-list-link" href="/proyects">Proyects</a></li>
+                        <li><a class="nav-list-link" href="/about">About Me</a></li>
+                        <li><a class="nav-list-link" href="/contact">Contact</a></li>
+                    </ul>
+                    
+                </nav>
+                <nav class="menu-nav-desplegable escondido">
                     <ul class="nav-list">
                         <li><a class="nav-list-link" href="/stack">Stack</a></li>
                         <li><a class="nav-list-link" href="/proyects">Proyects</a></li>
@@ -57,6 +66,17 @@ class CustomMenu extends HTMLElement {
             justify-content: space-around;
           }
           .menu-nav{
+            position: absolute;
+            top: 13vh;
+            width:100%;
+            background: black;
+            height: 87vh;
+            overflow:hidden;
+            justify-content: center;
+            align-items:center;
+            display:none;
+          }
+          .menu-nav-desplegable{
             position: absolute;
             top: 13vh;
             width:100%;
@@ -149,7 +169,7 @@ class CustomMenu extends HTMLElement {
   click() {
     this.render();
     let burger = this.shadow.querySelector(".nav-burger-logo") as any;
-    let lista = this.shadow.querySelector(".menu-nav") as any;
+    let lista = this.shadow.querySelector(".menu-nav-desplegable") as any;
     burger.addEventListener("click", () => lista.classList.toggle("mostrado"));
   }
 }
