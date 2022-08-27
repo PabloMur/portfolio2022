@@ -18,11 +18,7 @@ class Proyects extends HTMLElement {
                   <custom-title>Proyects</custom-title>
 
                   <div class="cards-container">
-                    <custom-card 
-                      title="Buscador de Pelis" 
-                      description="Este es un programa de terminal, que mediante comandos custom podemos solicitarle a un archivo .json, las peliculas ordenadas segun los fitlros que utilicemos"
-                      img=https://images.pexels.com/photos/207580/pexels-photo-207580.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500>
-                    </custom-card>
+                    
 
                     <custom-card 
                       title="Juego Piedra, Papel o Tijera" 
