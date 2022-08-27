@@ -9,6 +9,7 @@ class Proyects extends HTMLElement {
   }
   render() {
     const style = document.createElement("style");
+    const ppt = require("../../assets/img/ppt.png");
     this.shadow.innerHTML = `
           <div class="home-page">
               <custom-menu></custom-menu>
@@ -23,7 +24,8 @@ class Proyects extends HTMLElement {
                     <custom-card 
                       title="Juego Piedra, Papel o Tijera" 
                       description="Este es el trdicional juego, en el que podremos enfrentarnos a la PC. Tanto nuestro score como el de la maquina seran almacenados en el localStorage. Ademas, estamos ante la implementacion de una single page aplication, componentes, state managment y ruteo."
-                      img="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                      img="${ppt}"
+                      link="https://pablomur.github.io/desafio-m5/">
                     </custom-card>
 
                     <custom-card 

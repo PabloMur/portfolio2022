@@ -12,6 +12,7 @@ class Card extends HTMLElement {
     const title = this.getAttribute("title");
     const description = this.getAttribute("description");
     const imagen = this.getAttribute("img");
+    const link = this.getAttribute("link");
 
     this.shadow.innerHTML = `
             <div class="card-elements-container">
@@ -19,7 +20,7 @@ class Card extends HTMLElement {
                 <h3 class="card-title">${title}</h3>
                 <p class="card-description">${description}</p>
                 <div class="card-link">
-                  <a class="card-link-a" href="#">view at github</a>
+                  <a class="card-link-a" href="${link}" target="_blank">view at github</a>
                 </div>
             </div>
         `;
@@ -27,7 +28,7 @@ class Card extends HTMLElement {
     style.innerHTML = `
 			.card-elements-container{
 				background:red;
-        min-height: 60vh;
+        min-height: 40vh;
 				width: 300px;
 				border-radius: 25px;
         overflow: hidden;
@@ -43,9 +44,8 @@ class Card extends HTMLElement {
         }
       }
       .card-imagen{
-        background: red;
-        height: 40vh;
-        width: auto;
+        height: 30vh;
+        width: 100%;
       }
       .card-title{
         color: purple;
